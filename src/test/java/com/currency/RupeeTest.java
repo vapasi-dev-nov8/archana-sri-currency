@@ -10,14 +10,15 @@ class RupeeTest {
     public void shouldReturnTrueIfTwoRupeeValuesAreEqual(){
         Rupee rupee1 = new Rupee(10);
         Rupee rupee2 = new Rupee(10);
-        assertTrue(rupee1.compareTwoRupees(rupee2));
+        //assertTrue(rupee1.compareTwoRupees(rupee2));
+        assertTrue(rupee1.equals(rupee2));
     }
 
     @Test
     public void shouldReturnFalseIfTwoRupeeValuesAreNotEqual() {
         Rupee rupee1 = new Rupee(20);
         Rupee rupee2 = new Rupee(5);
-        assertFalse(rupee1.compareTwoRupees(rupee2));
+        assertFalse(rupee1.equals(rupee2));
     }
 
     @Test
@@ -25,6 +26,9 @@ class RupeeTest {
         Rupee rupee1 = new Rupee(5);
         Rupee rupee2 = new Rupee(25);
         Rupee resultRupee = new Rupee(30);
-        assertEquals(resultRupee.getValue(),rupee1.add(rupee2).getValue());
+        //assertEquals(resultRupee.getValue(),rupee1.add(rupee2).getValue());
+        assertTrue(rupee1.add(rupee2).equals(resultRupee));
     }
+
+
 }
